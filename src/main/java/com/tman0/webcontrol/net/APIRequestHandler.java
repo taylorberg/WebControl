@@ -2,9 +2,8 @@ package com.tman0.webcontrol.net;
 
 import io.undertow.server.HttpHandler;
 import io.undertow.server.HttpServerExchange;
-import org.spongepowered.api.Game;
-
 import org.slf4j.Logger;
+import org.spongepowered.api.Game;
 
 /**
  * This class handles all requests to the API server.
@@ -25,6 +24,8 @@ public class APIRequestHandler implements HttpHandler
     @Override
     public void handleRequest(HttpServerExchange httpServerExchange)
     {
+        // TODO: Security
+
 
     }
 }

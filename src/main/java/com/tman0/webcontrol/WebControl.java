@@ -1,19 +1,14 @@
 package com.tman0.webcontrol;
 
+import com.tman0.webcontrol.api.APIRegistrar;
 import com.tman0.webcontrol.net.APIRequestHandler;
-
 import io.undertow.Undertow;
-
 import org.slf4j.Logger;
-
 import org.spongepowered.api.Game;
 import org.spongepowered.api.event.state.PreInitializationEvent;
 import org.spongepowered.api.event.state.ServerStoppingEvent;
 import org.spongepowered.api.plugin.Plugin;
 import org.spongepowered.api.util.event.Subscribe;
-
-import java.io.File;
-import java.net.Inet4Address;
 
 /**
  * Main class for the WebControl plugin.
@@ -23,6 +18,8 @@ import java.net.Inet4Address;
 @Plugin(id = "webcontrol", name = "WebControl", version = "0.0.1-Alpha")
 public class WebControl
 {
+    APIRegistrar registrar;
+
     Game game;
     Logger logger;
 
@@ -34,6 +31,7 @@ public class WebControl
     @Subscribe
     public void preInitialization(PreInitializationEvent event)
     {
+        registrar = new APIRegistrar();
         game = event.getGame();
         logger = event.getPluginLog();
 
@@ -52,6 +50,13 @@ public class WebControl
     @Subscribe
     public void serverStop(ServerStoppingEvent event)
     {
+        logger.info("Stopping API server...");
+        server.stop();
+        logger.info("API server stopped.");
+    }
 
+    public APIRegistrar getRegistrar()
+    {
+        return registrar;
     }
 }
