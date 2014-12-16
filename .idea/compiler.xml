@@ -25,6 +25,9 @@
         <module name="WebControl" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="WebControl" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 

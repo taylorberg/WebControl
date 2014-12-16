@@ -1,5 +1,6 @@
 package com.tman0.webcontrol.api;
 
+import org.json.simple.JSONObject;
 import org.spongepowered.api.Game;
 
 /**
@@ -8,5 +9,5 @@ import org.spongepowered.api.Game;
  */
 public abstract class Action
 {
-    public abstract Object run(Game game, Object data); // TODO: Once a JSON serializer is decided, this should take and return JSON objects.
+    public abstract JSONObject run(Game game, JSONObject data); // TODO: Once a JSON serializer is decided, this should take and return JSON objects.
 }

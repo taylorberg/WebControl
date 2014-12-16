@@ -2,6 +2,7 @@ package com.tman0.webcontrol.actions;
 
 import com.tman0.webcontrol.api.APIRegistrar;
 import com.tman0.webcontrol.api.Action;
+import org.json.simple.JSONObject;
 import org.spongepowered.api.Game;
 import org.spongepowered.api.text.message.Messages;
 
@@ -16,7 +17,7 @@ public class TestActions
         registrar.registerAction("wc.test.helloworld", new Action()
         {
             @Override
-            public Object run(Game game, Object data)
+            public JSONObject run(Game game, JSONObject data)
             {
                 game.broadcastMessage(Messages.of("Hello, world!"));
                 return null;
