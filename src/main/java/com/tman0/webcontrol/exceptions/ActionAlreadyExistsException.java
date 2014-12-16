@@ -4,7 +4,7 @@ package com.tman0.webcontrol.exceptions;
  * @author tman0
  * @version 12.15.2014
  */
-public class ActionAlreadyExistsException extends Exception
+public class ActionAlreadyExistsException extends RuntimeException
 {
 
     /**

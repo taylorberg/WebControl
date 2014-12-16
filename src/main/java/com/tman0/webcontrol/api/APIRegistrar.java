@@ -25,6 +25,15 @@ public class APIRegistrar
     }
 
     /**
+     * Returns the number of Actions currently registered.
+     * @return The number of Actions currently registered.
+     */
+    public int getActionCount()
+    {
+        return actions.size();
+    }
+
+    /**
      * Convenience method to get an Action given a URL.
      *
      * @param path The fully-qualified URL of the Action. i.e. /wc/chat/send. Leading slash is optional.
@@ -47,7 +56,7 @@ public class APIRegistrar
      * @return true if success, false if failure
      * @throws com.tman0.webcontrol.exceptions.ActionAlreadyExistsException if the Action has already been registered.
      */
-    public boolean registerAction(String actionName, Action action) throws ActionAlreadyExistsException
+    public boolean registerAction(String actionName, Action action)
     {
         if (actions.containsKey(actionName)) throw new ActionAlreadyExistsException(actionName);
 
@@ -62,7 +71,7 @@ public class APIRegistrar
      * @return true if success, false if failure
      * @throws com.tman0.webcontrol.exceptions.NoSuchActionException if the Action does not exist or has not been registered.
      */
-    public boolean unregisterAction(String actionName) throws NoSuchActionException
+    public boolean unregisterAction(String actionName)
     {
         // TODO: Some kind of security so that plugins can't unregister other plugins' Actions
         if (!actions.containsKey(actionName)) throw new NoSuchActionException(actionName);
