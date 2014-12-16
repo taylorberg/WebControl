@@ -4,7 +4,8 @@ import com.tman0.webcontrol.WebControl;
 import com.tman0.webcontrol.actions.TestActions;
 
 /**
- * Created by tman0 on December.15.
+ * @author tman0
+ * @version 12.15.2014
  */
 public class DefaultActions
 {
