@@ -29,4 +29,4 @@ Security is still a bit up in the air right now, and these details ~~may~~ **wil
 Download
 -----
 Nothing yet... but if you want, you can watch and participate in development on my GitHub: https://github.com/tman0/webcontrol/
-Documentation will be available soon.
+Preliminary documentation is here: http://docs.webcontrol1.apiary.io/ - please let me know in the forum what you think or any ideas to improve the API, nothing is set in stone yet.
