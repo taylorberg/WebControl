@@ -1,5 +1,9 @@
 WebControl
 =======
+
+Development is temporarily halted until a working version of Sponge is released. Sorry!
+-------
+
 WebControl opens up a RESTful API which will securely allow server owners and developers to write web, mobile, and desktop applications which can execute commands, get information from, and control the Sponge server through a web API. Here's an example.
 
     POST /wc/chat/broadcast HTTP/1.1
